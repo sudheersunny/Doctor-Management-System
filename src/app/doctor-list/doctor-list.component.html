@@ -1,0 +1,50 @@
+<h2> Doctor List</h2>
+<div class="list row">
+    <div class="col-md-8">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by hospitalname"
+          [(ngModel)]="hospitalname"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            (click)="searchByName()">
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+<table class = "table table-striped table-dark">
+    <thead>
+        <tr>
+            <th> First Name</th>
+            <th> Last Name </th>
+            <th> Email </th>
+            <th> city</th>
+            <th> hospitalname</th>
+            <th> mobileno</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let doctor of doctors" >
+            <td> {{ doctor.firstName }} </td>
+            <td> {{ doctor.lastName }} </td>
+            <td> {{ doctor.email }} </td>
+            <td> {{ doctor.city }} </td>
+            <td> {{ doctor.hospitalname }} </td>
+            <td> {{ doctor.mobileno }} </td>
+            
+            <td>
+                <button (click) = "updateDoctor(doctor.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteDoctor(doctor.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "doctorDetails(doctor.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,46 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Update Doctor </h3>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="form-group">
+            <label> First Name</label>
+            <input type="text" class ="form-control" id = "firstName"
+                [(ngModel)] = "doctor.firstName" name = "firstName">
+        </div>
+
+        <div class="form-group">
+            <label> Last Name</label>
+            <input type="text" class ="form-control" id = "lastName"
+                [(ngModel)] = "doctor.lastName" name = "lastName">
+        </div>
+
+        <div class="form-group">
+            <label> Email</label>
+            <input type="text" class ="form-control" id = "email"
+                [(ngModel)] = "doctor.email" name = "email">
+        </div>
+
+        <div class="form-group">
+            <label> hospitalname</label>
+            <input type="text" class ="form-control" id = "hospitalname"
+                [(ngModel)] = "doctor.hospitalname" name = "hospitalname">
+        </div>
+
+        <div class="form-group">
+            <label> city</label>
+            <input type="text" class ="form-control" id = "city"
+                [(ngModel)] = "doctor.city" name = "city">
+        </div>
+
+        <div class="form-group">
+            <label> mobileno</label>
+            <input type="text" class ="form-control" id = "mobileno"
+                [(ngModel)] = "doctor.mobileno" name = "mobileno">
+        </div>
+
+
+
+        <button class = "btn btn-success" type ="submit">Submit</button>
+
+    </form>
+    </div> 
